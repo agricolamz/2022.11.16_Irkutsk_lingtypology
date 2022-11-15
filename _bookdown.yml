@@ -1,0 +1,11 @@
+book_filename: "2022.11.16_Irkutsk_lingtypology"
+delete_merged_file: true
+language:
+  label:
+    fig: 'Picture '
+    tab: 'Table '
+  ui:
+    edit: Edit
+    ref: 'References'
+    chapter_name: ''
+output_dir: "docs"

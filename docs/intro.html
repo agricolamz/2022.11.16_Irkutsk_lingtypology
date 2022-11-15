@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Введение в lingtypology</title>
+  <meta name="description" content="Введение в lingtypology" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Введение в lingtypology" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Введение в lingtypology" />
+  
+  
+  
+
+<meta name="author" content="Г. Мороз" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="что-такое-lingtypology.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.1.1/leaflet.js"></script>
+<script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="libs/leaflet-providers-plugin-2.1.1/leaflet-providers-plugin.js"></script>
+<link href="libs/leaflet-minimap-3.3.1/Control.MiniMap.min.css" rel="stylesheet" />
+<script src="libs/leaflet-minimap-3.3.1/Control.MiniMap.min.js"></script>
+<script src="libs/leaflet-minimap-3.3.1/Minimap-binding.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">lingtypology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Введение в R</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#установка-r-и-rstudio"><i class="fa fa-check"></i><b>1.1</b> Установка R и RStudio</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#полезные-ссылки"><i class="fa fa-check"></i><b>1.2</b> Полезные ссылки</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#rstudio"><i class="fa fa-check"></i><b>1.3</b> Rstudio</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#введение-в-r"><i class="fa fa-check"></i><b>1.4</b> Введение в R</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#calc"><i class="fa fa-check"></i><b>1.4.1</b> R как калькулятор</a></li>
+<li class="chapter" data-level="1.4.2" data-path="intro.html"><a href="intro.html#func"><i class="fa fa-check"></i><b>1.4.2</b> Функции</a></li>
+<li class="chapter" data-level="1.4.3" data-path="intro.html"><a href="intro.html#variables"><i class="fa fa-check"></i><b>1.4.3</b> Переменные</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#data_types"><i class="fa fa-check"></i><b>1.5</b> Типы данных</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#вектор"><i class="fa fa-check"></i><b>1.6</b> Вектор</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="intro.html"><a href="intro.html#index_atomic"><i class="fa fa-check"></i><b>1.6.1</b> Индексирование векторов</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="intro.html"><a href="intro.html#датафрейм"><i class="fa fa-check"></i><b>1.7</b> Датафрейм</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="что-такое-lingtypology.html"><a href="что-такое-lingtypology.html"><i class="fa fa-check"></i><b>2</b> Что такое <code>lingtypology</code>?</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="что-такое-lingtypology.html"><a href="что-такое-lingtypology.html#установка-пакета"><i class="fa fa-check"></i><b>2.1</b> Установка пакета</a></li>
+<li class="chapter" data-level="2.2" data-path="что-такое-lingtypology.html"><a href="что-такое-lingtypology.html#функции-для-базы-glottolog"><i class="fa fa-check"></i><b>2.2</b> Функции для базы Glottolog</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="что-такое-lingtypology.html"><a href="что-такое-lingtypology.html#синтаксис"><i class="fa fa-check"></i><b>2.2.1</b> Синтаксис</a></li>
+<li class="chapter" data-level="2.2.2" data-path="что-такое-lingtypology.html"><a href="что-такое-lingtypology.html#как-использовать-основные-функции"><i class="fa fa-check"></i><b>2.2.2</b> Как использовать основные функции?</a></li>
+<li class="chapter" data-level="2.2.3" data-path="что-такое-lingtypology.html"><a href="что-такое-lingtypology.html#спеллчекер-смотрите-в-сообщения-об-ошибках"><i class="fa fa-check"></i><b>2.2.3</b> Спеллчекер: смотрите в сообщения об ошибках!</a></li>
+<li class="chapter" data-level="2.2.4" data-path="что-такое-lingtypology.html"><a href="что-такое-lingtypology.html#кельтские-языки"><i class="fa fa-check"></i><b>2.2.4</b> Кельтские языки</a></li>
+<li class="chapter" data-level="2.2.5" data-path="что-такое-lingtypology.html"><a href="что-такое-lingtypology.html#австронезийские-языки"><i class="fa fa-check"></i><b>2.2.5</b> Австронезийские языки</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="что-такое-lingtypology.html"><a href="что-такое-lingtypology.html#создание-карт"><i class="fa fa-check"></i><b>2.3</b> Создание карт</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="что-такое-lingtypology.html"><a href="что-такое-lingtypology.html#базовая-функция"><i class="fa fa-check"></i><b>2.3.1</b> Базовая функция</a></li>
+<li class="chapter" data-level="2.3.2" data-path="что-такое-lingtypology.html"><a href="что-такое-lingtypology.html#добавляем-признаки"><i class="fa fa-check"></i><b>2.3.2</b> Добавляем признаки</a></li>
+<li class="chapter" data-level="2.3.3" data-path="что-такое-lingtypology.html"><a href="что-такое-lingtypology.html#подписи"><i class="fa fa-check"></i><b>2.3.3</b> Подписи</a></li>
+<li class="chapter" data-level="2.3.4" data-path="что-такое-lingtypology.html"><a href="что-такое-lingtypology.html#task-3.1"><i class="fa fa-check"></i><b>2.3.4</b> Task 3.1</a></li>
+<li class="chapter" data-level="2.3.5" data-path="что-такое-lingtypology.html"><a href="что-такое-lingtypology.html#task-3.2"><i class="fa fa-check"></i><b>2.3.5</b> Task 3.2</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="что-такое-lingtypology.html"><a href="что-такое-lingtypology.html#api"><i class="fa fa-check"></i><b>2.4</b> API</a></li>
+<li class="chapter" data-level="2.5" data-path="что-такое-lingtypology.html"><a href="что-такое-lingtypology.html#а-вообще-смотрите-мануал"><i class="fa fa-check"></i><b>2.5</b> … а вообще смотрите мануал</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Введение в <code>lingtypology</code></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Введение в <code>lingtypology</code></h1>
+<p class="author"><em>Г. Мороз</em></p>
+</div>
+<div id="intro" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Введение в R<a href="intro.html#intro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="установка-r-и-rstudio" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Установка R и RStudio<a href="intro.html#установка-r-и-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Нам понадобятся:</p>
+<ul>
+<li>зарегестрироваться на <a href="https://rstudio.cloud/" class="uri">https://rstudio.cloud/</a></li>
+</ul>
+<p>Часто можно увидеть или услышать, что R — язык программирования для “статистической обработки данных”. Изначально это, конечно, было правдой, но уже давно R — это полноценный язык программирования, который при помощи своих пакетов позволяет решать огромный спектр задач. В данной книге используется следующая версия R:</p>
+<pre><code>## [1] &quot;R version 4.2.2 Patched (2022-11-10 r83330)&quot;</code></pre>
+</div>
+<div id="полезные-ссылки" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Полезные ссылки<a href="intro.html#полезные-ссылки" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>В интернете легко найти документацию и туториалы по самым разным вопросам в R, так что главный залог успеха — грамотно пользоваться поисковиком, и лучше на английском языке.</p>
+<ul>
+<li><a href="https://r4ds.had.co.nz/">книга <span class="citation">(<a href="#ref-wickham16" role="doc-biblioref">Wickham and Grolemund 2016</a>)</span></a></li>
+<li><a href="https://stackoverflow.com">stackoverflow</a> — сервис, где достаточно быстро отвечают на любые вопросы (не обязательно по R)</li>
+<li><a href="https://community.rstudio.com/">RStudio community</a> — быстро отвечают на вопросы, связанные с R</li>
+<li><a href="https://ru.stackoverflow.com">русский stackoverflow</a></li>
+<li><a href="https://www.r-bloggers.com/">R-bloggers</a> — сайт, где собираются новинки, связанные с R</li>
+<li><a href="https://t.me/rlang_ru">чат</a>, где можно спрашивать про R на русском (но почитайте <a href="https://github.com/r-lang-group-ru/group-rules/blob/master/README.md">правила чата</a>, перед тем как спрашивать)</li>
+<li><a href="https://t.me/joinchat/CxZg5goGc6rlWGjcvOYrpA">чат</a> по визуализации данных, <a href="https://t.me/ddjrus">чат</a> датажурналистов</li>
+<li><a href="https://t.me/chartomojka">канал про визуализацию</a>, <a href="https://t.me/novaya_data">дата-блог “Новой газеты”</a>, …</li>
+</ul>
+</div>
+<div id="rstudio" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Rstudio<a href="intro.html#rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Когда вы откроете RStudio первый раз, вы увидите три панели: консоль, окружение и историю, а также панель для всего остального. Если ткнуть в консоли на значок уменьшения, то можно открыть дополнительную панель, где можно писать скрипт.</p>
+<p><img src="images/01_01_rstudio.png" width="250" /></p>
+<p>Существуют разные типы пользователей: одни любят работать в консоли (на картинке это <strong>2 — R Console</strong>), другие предпочитают скрипты (<strong>1 — Code Editor</strong>). Консоль позволяет использовать интерактивный режим команда-ответ, а скрипт является по сути текстовым документом, фрагменты которого можно для отладки запускать в консоли.</p>
+<p><strong>3 — Workspace and History</strong>: Здесь можно увидеть переменные. Это поле будет автоматически обновляться по мере того, как Вы будете запускать строчки кода и создавать новые переменные. Еще там есть вкладка с историей последних команд, которые были запущены.</p>
+<p><strong>4 — Plots and files</strong>: Здесь есть очень много всего. Во-первых, небольшой файловый менеджер, во-вторых, там будут появляться графики, когда вы будете их рисовать. Там же есть вкладка с вашими пакетами (Packages) и Help по функциям. Но об этом потом.</p>
+</div>
+<div id="введение-в-r" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Введение в R<a href="intro.html#введение-в-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="calc" class="section level3 hasAnchor" number="1.4.1">
+<h3><span class="header-section-number">1.4.1</span> R как калькулятор<a href="intro.html#calc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ой-ей, консоль, скрипт че-то все непонятно.<br />
+Давайте начнем с самого простого и попробуем использовать R как простой калькулятор. <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>^</code> (степень), <code>()</code> и т.д.</p>
+<p>Просто запускайте в консоли пока не надоест:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="intro.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">40</span><span class="sc">+</span><span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 42</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="intro.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3-2</span></span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="intro.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span><span class="sc">*</span><span class="dv">6</span></span></code></pre></div>
+<pre><code>## [1] 30</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="intro.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dv">99</span><span class="sc">/</span><span class="dv">9</span></span></code></pre></div>
+<pre><code>## [1] 11</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="intro.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">^</span><span class="dv">3</span></span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="intro.html#cb12-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">2</span><span class="sc">+</span><span class="dv">2</span>)<span class="sc">*</span><span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<p>Ничего сложного, верно? Вводим выражение и получаем результат. Порядок выполнения арифметических операций как в математике, так что не забывайте про скобочки.</p>
+<blockquote>
+<p>Если Вы не уверены в том, какие операции имеют приоритет, то используйте скобочки, чтобы точно обозначить, в каком порядке нужно производить операции.</p>
+</blockquote>
+<p>Важно отметить, что R может служить лишь как калкулятор. Можно узнать, что <span class="math inline">\(\cos(\frac{\pi}{2})\)</span> приблизительно равно 0.9659258, но вы никогда не узнаете, что <span class="math inline">\(\cos(\frac{\pi}{2})\)</span> также равно <span class="math inline">\(\sqrt{\frac{1+\frac{\sqrt{3}}{2}}{2}}\)</span>. Но при этом какие-то рутинные операции, с которыми вы, возможно, сталкивались (дифернцирование, интегрирование, нахождение корней полинома и др.), R делает с легкостью.</p>
+</div>
+<div id="func" class="section level3 hasAnchor" number="1.4.2">
+<h3><span class="header-section-number">1.4.2</span> Функции<a href="intro.html#func" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Давайте теперь извлечем корень из какого-нибудь числа. В принципе, тем, кто помнит школьный курс математики, возведения в степень вполне достаточно:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="intro.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span><span class="sc">^</span><span class="fl">0.5</span></span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<p>Ну а если нет, то можете воспользоваться специальной <strong>функцией</strong>: это обычно какие-то буквенные символы с круглыми скобками сразу после названия функции. Мы подаем на вход (внутрь скобочек) какие-то данные, внутри этих функций происходят какие-то вычисления, которые выдают в ответ какие-то другие данные (или же функция записывает файл, рисует график и т.д.).</p>
+<p>Вот, например, функция для корня:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="intro.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">16</span>)</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<blockquote>
+<p>R — case-sensitive язык, т.е. регистр важен. <code>SQRT(16)</code> не будет работать.</p>
+</blockquote>
+<p>А вот так выглядит функция логарифма:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="intro.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(<span class="dv">8</span>)</span></code></pre></div>
+<pre><code>## [1] 2.079442</code></pre>
+<p>Так, вроде бы все нормально, но… Если Вы еще что-то помните из школьной математики, то должны понимать, что что-то здесь не так.</p>
+<p>Здесь не хватает основания логарифма!</p>
+<blockquote>
+<p>Логарифм — показатель степени, в которую надо возвести число, называемое основанием, чтобы получить данное число.</p>
+</blockquote>
+<p>То есть у логарифма 8 по основанию 2 будет значение 3:</p>
+<p><span class="math inline">\(\log_2 8 = 3\)</span></p>
+<p>То есть если возвести 2 в степень 3 у нас будет 8:</p>
+<p><span class="math inline">\(2^3 = 8\)</span></p>
+<p>Только наша функция считает все как-то не так.</p>
+<p>Чтобы понять, что происходит, нам нужно залезть в хэлп этой функции:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="intro.html#cb20-1" aria-hidden="true" tabindex="-1"></a>?log</span></code></pre></div>
+<p>Справа внизу в RStudio появится вот такое окно:</p>
+<p><img src="images/help.png" /></p>
+<p>Действительно, у этой функции есть еще аргумент <em><code>base =</code></em>. По дефолту он равен числу Эйлера (2.7182818…), т.е. функция считает натуральный логарифм.</p>
+<p>В большинстве функций R есть какой-то основной инпут — данные в том или ином формате, а есть и дополнительные параметры, которые можно прописывать вручную, если параметры по умолчанию нас не устраивают.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="intro.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(<span class="at">x =</span> <span class="dv">8</span>, <span class="at">base =</span> <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p>…или просто (если Вы уверены в порядке аргументов):</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="intro.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(<span class="dv">8</span>,<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p>Более того, Вы можете использовать оутпут одних функций как инпут для других:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="intro.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(<span class="dv">8</span>, <span class="fu">sqrt</span>(<span class="dv">4</span>))</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p>Если эксплицитно писать имена аргументов, то их порядок в функции не важен:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="intro.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(<span class="at">base =</span> <span class="dv">2</span>, <span class="at">x =</span> <span class="dv">8</span>)</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p>А еще можно недописывать имена аргументов, если они не совпадают с другими:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="intro.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(<span class="at">b =</span> <span class="dv">2</span>, <span class="at">x =</span> <span class="dv">8</span>)</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+</div>
+<div id="variables" class="section level3 hasAnchor" number="1.4.3">
+<h3><span class="header-section-number">1.4.3</span> Переменные<a href="intro.html#variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Важная штука в программировании на практически любом языке — возможность сохранять значения в <strong>переменных</strong>. В R это обычно делается с помощью вот этих символов: <em>&lt;-</em> (но можно использовать и обычное <em>=</em>, хотя это не очень принято). Для этого есть удобное сочетание клавиш: нажмите одновременно <code>Alt -</code> (или <code>option -</code> на Маке).</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="intro.html#cb31-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb31-2"><a href="intro.html#cb31-2" aria-hidden="true" tabindex="-1"></a>a</span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<p>После присвоения переменная появляется во вкладке <strong>Environment</strong> в RStudio:</p>
+<p>Можно использовать переменные в функциях и просто вычислениях:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="intro.html#cb33-1" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> a<span class="sc">^</span>a<span class="sc">+</span>a<span class="sc">*</span>a</span>
+<span id="cb33-2"><a href="intro.html#cb33-2" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="intro.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(b,a)</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+</div>
+</div>
+<div id="data_types" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Типы данных<a href="intro.html#data_types" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Теперь нам нужно ознакомиться с двумя другими важными типами данных в R:</p>
+<ol style="list-style-type: decimal">
+<li><strong>character</strong>: строки символов. Они должны выделяться кавычками. Можно использовать как <code>"</code>, так и <code>'</code> (что удобно, когда строчка внутри уже содержит какие-то кавычки).</li>
+</ol>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="intro.html#cb37-1" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="st">&quot;Всем привет!&quot;</span></span>
+<span id="cb37-2"><a href="intro.html#cb37-2" aria-hidden="true" tabindex="-1"></a>s</span></code></pre></div>
+<pre><code>## [1] &quot;Всем привет!&quot;</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>logical</strong>: просто <code>TRUE</code> или <code>FALSE</code>.</li>
+</ol>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="intro.html#cb39-1" aria-hidden="true" tabindex="-1"></a>t1 <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
+<span id="cb39-2"><a href="intro.html#cb39-2" aria-hidden="true" tabindex="-1"></a>f1 <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb39-3"><a href="intro.html#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-4"><a href="intro.html#cb39-4" aria-hidden="true" tabindex="-1"></a>t1</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="intro.html#cb41-1" aria-hidden="true" tabindex="-1"></a>f1</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+</div>
+<div id="вектор" class="section level2 hasAnchor" number="1.6">
+<h2><span class="header-section-number">1.6</span> Вектор<a href="intro.html#вектор" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Вектор</strong> (или <strong>atomic vector</strong> или <strong>atomic</strong>) — это набор (столбик) чисел в определенном порядке.</p>
+<p>На самом деле, мы уже работали с векторами в R, но, возможно, Вы об этом даже не догадывались. Дело в том, что в R нет как таковых “значений”, <strong>есть вектора длиной 1</strong>.</p>
+<p>Чтобы создать вектор из нескольких значений, нужно воспользоваться функцией <em><code>c()</code></em>:</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="intro.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">8</span>,<span class="dv">15</span>,<span class="dv">16</span>,<span class="dv">23</span>,<span class="dv">42</span>)</span></code></pre></div>
+<pre><code>## [1]  4  8 15 16 23 42</code></pre>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="intro.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">&quot;Хэй&quot;</span>, <span class="st">&quot;Хэй&quot;</span>, <span class="st">&quot;Ха&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Хэй&quot; &quot;Хэй&quot; &quot;Ха&quot;</code></pre>
+<blockquote>
+<p>Одна из самых мерзких и раздражающих причин ошибок в коде — это использование <code>с</code> из кириллицы вместо <code>c</code> из латиницы. Видите разницу? И я не вижу. А R видит. И об этом сообщает:</p>
+</blockquote>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="intro.html#cb47-1" aria-hidden="true" tabindex="-1"></a>с(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## Error in с(3, 4, 5): could not find function &quot;с&quot;</code></pre>
+<p>Для создания числовых векторов есть удобный <strong>оператор</strong> <code>:</code></p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="intro.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="intro.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span><span class="sc">:-</span><span class="dv">3</span></span></code></pre></div>
+<pre><code>## [1]  5  4  3  2  1  0 -1 -2 -3</code></pre>
+<p>Этот оператор создает вектор от первого числа до второго с шагом 1. Вы не представляете, как часто эта штука нам пригодится… Если же нужно сделать вектор с другим шагом, то есть функция <code>seq()</code>:</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="intro.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">10</span>,<span class="dv">100</span>, <span class="at">by =</span> <span class="dv">10</span>)</span></code></pre></div>
+<pre><code>##  [1]  10  20  30  40  50  60  70  80  90 100</code></pre>
+<p>Кроме того, можно задавать не шаг, а длину вектора. Тогда шаг функция <code>seq()</code> посчитает сама:</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="intro.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">13</span>, <span class="at">length.out =</span> <span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## [1]  1  5  9 13</code></pre>
+<p>Другая функция — <code>rep()</code> — позволяет создавать вектора с повторяющимися значениями. Первый аргумент — значение, которое нужно повторять, а второй аргумент — сколько раз повторять.</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="intro.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] 1 1 1 1 1</code></pre>
+<p>И первый, и второй аргумент могут быть векторами!</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="intro.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 1 2 3 1 2 3 1 2 3</code></pre>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="intro.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 1 2 2 3 3 3</code></pre>
+<p>Еще можно объединять вектора (что мы, по сути, и делали, просто с векторами длиной 1):</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="intro.html#cb63-1" aria-hidden="true" tabindex="-1"></a>v1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Hey&quot;</span>, <span class="st">&quot;Ho&quot;</span>)</span>
+<span id="cb63-2"><a href="intro.html#cb63-2" aria-hidden="true" tabindex="-1"></a>v2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Let&#39;s&quot;</span>, <span class="st">&quot;Go!&quot;</span>)</span>
+<span id="cb63-3"><a href="intro.html#cb63-3" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(v1,v2)</span></code></pre></div>
+<pre><code>## [1] &quot;Hey&quot;   &quot;Ho&quot;    &quot;Let&#39;s&quot; &quot;Go!&quot;</code></pre>
+<div id="index_atomic" class="section level3 hasAnchor" number="1.6.1">
+<h3><span class="header-section-number">1.6.1</span> Индексирование векторов<a href="intro.html#index_atomic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Задача, которую Вам придется решать каждые пять минут работы в R - как выбрать из вектора (или же списка, матрицы и датафрейма) какую-то его часть. Для этого используются квадратные скобочки <code>[]</code> (не круглые - они для функций!).</p>
+<p>Самое простое - индексировать по номеру индекса, т.е. порядку значения в векторе.</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="intro.html#cb65-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb65-2"><a href="intro.html#cb65-2" aria-hidden="true" tabindex="-1"></a>n[<span class="dv">1</span>]</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="intro.html#cb67-1" aria-hidden="true" tabindex="-1"></a>n[<span class="dv">10</span>]</span></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<p>С помощью индексирования можно не только вытаскивать имеющиеся значения в векторе, но и присваивать им новые:</p>
+<p>Конечно, можно использовать целые векторы для индексирования:</p>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="intro.html#cb69-1" aria-hidden="true" tabindex="-1"></a>n[<span class="dv">4</span><span class="sc">:</span><span class="dv">7</span>]</span></code></pre></div>
+<pre><code>## [1] 4 5 6 7</code></pre>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="intro.html#cb71-1" aria-hidden="true" tabindex="-1"></a>n[<span class="dv">10</span><span class="sc">:</span><span class="dv">1</span>]</span></code></pre></div>
+<pre><code>##  [1] 10  9  8  7  6  5  4  3  2  1</code></pre>
+<p>Индексирование с минусом выдаст вам все значения вектора кроме выбранных:</p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="intro.html#cb73-1" aria-hidden="true" tabindex="-1"></a>n[<span class="sc">-</span><span class="dv">1</span>]</span></code></pre></div>
+<pre><code>## [1]  2  3  4  5  6  7  8  9 10</code></pre>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="intro.html#cb75-1" aria-hidden="true" tabindex="-1"></a>n[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">5</span>)]</span></code></pre></div>
+<pre><code>## [1]  1  2  3  6  7  8  9 10</code></pre>
+<p>Более того, можно использовать логический вектор для индексирования. В этом случае нужен логический вектор такой же длины:</p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="intro.html#cb77-1" aria-hidden="true" tabindex="-1"></a>n[<span class="fu">c</span>(<span class="cn">TRUE</span>,<span class="cn">FALSE</span>,<span class="cn">TRUE</span>,<span class="cn">FALSE</span>,<span class="cn">TRUE</span>,<span class="cn">FALSE</span>,<span class="cn">TRUE</span>,<span class="cn">FALSE</span>,<span class="cn">TRUE</span>,<span class="cn">FALSE</span>)]</span></code></pre></div>
+<pre><code>## [1] 1 3 5 7 9</code></pre>
+<p>Ну а если они не равны, то тут будет снова работать правило ресайклинга!</p>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="intro.html#cb79-1" aria-hidden="true" tabindex="-1"></a>n[<span class="fu">c</span>(<span class="cn">TRUE</span>,<span class="cn">FALSE</span>)] <span class="co">#то же самое - recycling rule!</span></span></code></pre></div>
+<pre><code>## [1] 1 3 5 7 9</code></pre>
+<p>Есть еще один способ индексирования векторов, но он несколько более редкий: индексирование по имени. Дело в том, что для значений векторов можно (но не обязательно) присваивать имена:</p>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="intro.html#cb81-1" aria-hidden="true" tabindex="-1"></a>my_named_vector <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">first =</span> <span class="dv">1</span>, <span class="at">second =</span> <span class="dv">2</span>, <span class="at">third =</span> <span class="dv">3</span>)</span>
+<span id="cb81-2"><a href="intro.html#cb81-2" aria-hidden="true" tabindex="-1"></a>my_named_vector[<span class="st">&#39;first&#39;</span>]</span></code></pre></div>
+<pre><code>## first 
+##     1</code></pre>
+<p>А еще можно “вытаскивать” имена из вектора с помощью функции <code>names()</code> и присваивать таким образом новые.</p>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="intro.html#cb83-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span></span>
+<span id="cb83-2"><a href="intro.html#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(d) <span class="ot">&lt;-</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>]</span>
+<span id="cb83-3"><a href="intro.html#cb83-3" aria-hidden="true" tabindex="-1"></a>d[<span class="st">&quot;a&quot;</span>]</span></code></pre></div>
+<pre><code>## a 
+## 1</code></pre>
+<blockquote>
+<p><code>letters</code> - это “зашитая” в R константа - вектор букв от a до z. Иногда это очень удобно! Кроме того, есть константа <code>LETTERS</code> - то же самое, но заглавными буквами. А еще есть названия месяцев на английском и числовая константа <code>pi</code>.</p>
+</blockquote>
+<p>Теперь посчитаем среднее вектора <code>n</code>:</p>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="intro.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(n)</span></code></pre></div>
+<pre><code>## [1] 5.5</code></pre>
+<p>А как вытащить все значения, которые больше среднего?</p>
+<p>Сначала получим логический вектор — какие значения больше среднего:</p>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="intro.html#cb87-1" aria-hidden="true" tabindex="-1"></a>larger <span class="ot">&lt;-</span> n <span class="sc">&gt;</span> <span class="fu">mean</span>(n)</span>
+<span id="cb87-2"><a href="intro.html#cb87-2" aria-hidden="true" tabindex="-1"></a>larger</span></code></pre></div>
+<pre><code>##  [1] FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE</code></pre>
+<p>А теперь используем его для индексирования вектора <code>n</code>:</p>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="intro.html#cb89-1" aria-hidden="true" tabindex="-1"></a>n[larger]</span></code></pre></div>
+<pre><code>## [1]  6  7  8  9 10</code></pre>
+<p>Можно все это сделать в одну строчку:</p>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="intro.html#cb91-1" aria-hidden="true" tabindex="-1"></a>n[n<span class="sc">&gt;</span><span class="fu">mean</span>(n)]</span></code></pre></div>
+<pre><code>## [1]  6  7  8  9 10</code></pre>
+</div>
+</div>
+<div id="датафрейм" class="section level2 hasAnchor" number="1.7">
+<h2><span class="header-section-number">1.7</span> Датафрейм<a href="intro.html#датафрейм" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Табличные данные хранятся в R в виде датафреймов. Важное ограничение – в одном столбце должны быть данные одного типа.</p>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="intro.html#cb93-1" aria-hidden="true" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Ivan&quot;</span>, <span class="st">&quot;Eugeny&quot;</span>, <span class="st">&quot;Lena&quot;</span>, <span class="st">&quot;Misha&quot;</span>, <span class="st">&quot;Sasha&quot;</span>) </span>
+<span id="cb93-2"><a href="intro.html#cb93-2" aria-hidden="true" tabindex="-1"></a>age <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">26</span>, <span class="dv">34</span>, <span class="dv">23</span>, <span class="dv">27</span>, <span class="dv">26</span>) </span>
+<span id="cb93-3"><a href="intro.html#cb93-3" aria-hidden="true" tabindex="-1"></a>student <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>) </span>
+<span id="cb93-4"><a href="intro.html#cb93-4" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(name, age, student)  </span>
+<span id="cb93-5"><a href="intro.html#cb93-5" aria-hidden="true" tabindex="-1"></a>df</span></code></pre></div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["age"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["student"],"name":[3],"type":["lgl"],"align":["right"]}],"data":[{"1":"Ivan","2":"26","3":"FALSE"},{"1":"Eugeny","2":"34","3":"FALSE"},{"1":"Lena","2":"23","3":"TRUE"},{"1":"Misha","2":"27","3":"TRUE"},{"1":"Sasha","2":"26","3":"TRUE"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>Чтобы вызвать какой-то из векторов датафрейма нужно использовать знак доллара</p>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="intro.html#cb94-1" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>age</span></code></pre></div>
+<pre><code>## [1] 26 34 23 27 26</code></pre>
+<p>К нему можно обращаться обычным образом через квадратные скобки</p>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="intro.html#cb96-1" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>age[<span class="dv">2</span><span class="sc">:</span><span class="dv">5</span>]</span></code></pre></div>
+<pre><code>## [1] 34 23 27 26</code></pre>
+<p>Кроме того можно обращаться через запятую к строчкам (до запятой) и к столбцам (после запятой):</p>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="intro.html#cb98-1" aria-hidden="true" tabindex="-1"></a>df[<span class="dv">3</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>]</span></code></pre></div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["age"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["student"],"name":[2],"type":["lgl"],"align":["right"]}],"data":[{"1":"23","2":"TRUE","_rn_":"3"},{"1":"27","2":"TRUE","_rn_":"4"},{"1":"26","2":"TRUE","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>А еще можно использовать названия колонок внутри квадратных скобок:</p>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="intro.html#cb99-1" aria-hidden="true" tabindex="-1"></a>df[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>,<span class="st">&quot;age&quot;</span>]</span></code></pre></div>
+<pre><code>## [1] 26 34</code></pre>
+
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-wickham16" class="csl-entry">
+Wickham, Hadley, and Garrett Grolemund. 2016. <em>R for Data Science: Import, Tidy, Transform, Visualize, and Model Data</em>. O’Reilly Media, Inc.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="что-такое-lingtypology.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/agricolamz/2022.11.16_Irkutsk_r_packages/edit/master/01-intro_to_r.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+},
+"self_contained": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

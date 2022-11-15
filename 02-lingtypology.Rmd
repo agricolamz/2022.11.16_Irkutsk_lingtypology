@@ -1,0 +1,227 @@
+---
+title: "Введение в `lingtypology`"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message = FALSE, warning = FALSE, comment=NA, fig.width=8, fig.height=3.4)
+library(lingtypology)
+```
+
+# Что такое `lingtypology`?
+
+* простое средство для создания статических и динамических карт
+* API для разных лингвистических баз данных (Glottolog, WALS, PHOIBLe, AUTOTYP и другие)
+
+## Установка пакета
+
+Пакет можно скачать из CRAN:
+
+```{r, eval = FALSE}
+install.packages("lingtypology")
+```
+
+… или из GitHub:
+
+```{r, eval = FALSE}
+# install.packages("devtools") # 
+devtools::install_github("ropensci/lingtypology")
+```
+
+Если появляются какие-то проблемы с зависимостями, то можно попробовать установить более старую версию:
+
+```{r, eval = FALSE}
+devtools::install_version("lingtypology", version = "1.0.12")
+```
+
+Загружаем библиотеку:
+
+```{r}
+library(lingtypology)
+```
+
+## Функции для базы Glottolog
+
+Пакте основан на базе данных [Glottolog database](http://glottolog.org/) (v. 2.7), так что в `lingtypology` существует несколько функций для более простого .
+
+### Синтаксис
+Большинство функций в `lingtypology` имеют стандартный синтаксис: **то, что надо.то, что есть**.
+
+* **aff.lang()** — аффилиация по языку
+* **area.lang()** — макро регион по языку
+* **country.lang()** — страна по языку
+* **iso.lang()** — ISO 639-3 код по языку
+* **gltc.lang()** — glottocode (идентификатор языка в базе данных Glottolog) по языку
+* **lat.lang()** — широта по языку
+* **long.lang()** — долгота по языку
+* **lang.aff()** — языки по аффилиации
+* **lang.iso()** — язык по ISO 639-3 коду
+* **lang.gltc()** — язык по glottocode
+
+Можно конвертировать glottocod в ISO 639-3 и обратно:
+
+* **gltc.iso()** — get glottocode by ISO 639-3 code
+* **iso.gltc()** — get ISO 639-3 code by glottocode
+
+В базе данных [Glottolog database (v. 4.6)](http://glottolog.org/) достаточно много всего. Вот какие переменные есть в базе:
+
+```{r}
+names(glottolog)
+```
+
+### Как использовать основные функции?
+Все функции могут брать в качестве аргумента:
+
+* обычную строку
+```{r}
+iso.lang("Adyghe")
+lang.iso("ady")
+country.lang("Adyghe")
+lang.aff("Daghestanian")
+```
+
+* вектор строк
+```{r}
+area.lang(c("Adyghe", "Aduge"))
+lang <- c("Adyghe", "Russian")
+aff.lang(lang)
+```
+
+*  другие функции
+```{r}
+iso.lang(lang.aff("Circassian"))
+```
+
+Поведение большинства функций достаточно предсказуемо, но функция `country.lang` имеет некоторые особенности. По умолчанию она берет вектор языков и возвращает вектор стран. Однако если добавить аргумент `intersection = TRUE`, то функция вернет вектор стран, где говорят на всех языках из запроса.
+```{r}
+country.lang(c("Udi", "Laz"))
+```
+
+### Спеллчекер: смотрите в сообщения об ошибках!
+Существуют функции, которые принимают страны в качестве входа. К сожалению, некоторые страны имеют альтернативные названия и стандартные сокращения. Так что, для того, чтобы пользователям не пришлось думать, как правильно  _Ivory Coast_ или _Cote d'Ivoire_, все официальные сокращения и названия хранятся в базе данных:
+
+```{r}
+lang.country("Cape Verde")
+head(lang.country("US", list = FALSE))
+```
+
+Все функции, которые принимают вектор языков на вход, содержат в себе спеллчекер, который предложит варианты, если язык не найдется в базе данных:
+
+```{r, warning=TRUE, results='asis'}
+aff.lang("Adyge")
+```
+
+
+### Кельтские языки
+Сколько кельтских языков в базе?
+
+```{r, echo=FALSE, results='asis'}
+library(checkdown)
+check_question(answer = length(lang.aff("Celtic")))
+```
+
+### Австронезийские языки
+Сколько австронезийских языков в базе?
+```{r, echo=FALSE, results='asis'}
+check_question(answer = length(lang.aff("Austronesian")))
+```
+
+## Создание карт
+
+### Базовая функция
+```{r}
+map.feature(c("Adyghe", "Kabardian", "Polish", "Russian", "Bulgarian"))
+```
+
+### Добавляем признаки
+
+Создаем датафрейм:
+```{r}
+df <- data.frame(language = c("Adyghe", "Kabardian", "Polish", "Russian", "Bulgarian"),
+                 features = c("polysynthetic", "polysynthetic", "fusional", "fusional", "fusional"))
+df
+```
+
+Рисуем карту:
+```{r}
+map.feature(languages = df$language,
+            features = df$features)
+```
+
+Существует несколько типов переменных в R и `map.feature` работает по-разному в зависимости от типа переменных. Я воспользуюсь встроенным датасетом `phonological_profiles` который содержит 19 языков из базы данных [UPSyD](http://www.lapsyd.ddl.ish-lyon.cnrs.fr/lapsyd/). В этом датасете семь переменных, в том числе категориальную переменную `ejectives`, которая показывает, есть ли в языке абруптивные звуки, и числовые переменные `consonants` and `vowels`, которые содержат информацию о количестве согласных и гласных в языке.
+
+```{r}
+map.feature(languages = phonological_profiles$language,
+            features = phonological_profiles$ejectives) # categorical
+map.feature(languages = phonological_profiles$language,
+            features = phonological_profiles$consonants) # numeric
+```
+
+Карты можно показывать двумя способами: с Атлантическим и Тихим океанами в середине. Чобы поменять дефолтный вариант с Тихим океаном нужно поменять аргумент `map.orientation`:
+
+```{r}
+map.feature(languages = phonological_profiles$language,
+            features = phonological_profiles$consonants,
+            map.orientation = "Atlantic")
+```
+
+### Подписи
+К точкам можно добавлять подписи, используя аргумент `label`.
+```{r}
+map.feature(languages = df$language,
+            features = df$features,
+            label = df$language)
+```
+
+Существует несколько дополнительных аргументов: `label.fsize`, `label.position` и `label.hide`.
+
+```{r}
+map.feature(languages = df$language, 
+            features = df$features,
+            label = df$language,
+            label.fsize = 20,
+            label.position = "left",
+            label.hide = FALSE)
+```
+
+### Task 3.1
+Создайте карту с чукотским, французским,  кана и нии и добавьте подписи, которые не исчезают:
+```{r, echo = FALSE}
+map.feature(languages = c("Chukchi", "French", "Khana", "Nii"),
+            label = c("Chukchi", "French", "Khana", "Nii"),
+            label.hide = FALSE)
+```
+
+### Task 3.2
+Создайте карту с бодскими языками и добавьте миникарту, используя аргумент `minimap = TRUE`:
+```{r, echo = FALSE}
+map.feature(languages = lang.aff("Bodish"),
+            minimap = TRUE)
+```
+
+## API
+
+`lingtypology` позволяет скачать данные из других типологических баз.
+
+* [World Atlas of Language Structures](http://wals.info/)
+* [AUTOTYP](https://github.com/autotyp/autotyp-data#the-autotyp-database)
+* [PHOIBLE](http://phoible.org/)
+* [Affix Borrowing database](http://afbo.info)
+* [South American Indigenous Language Structures](http://sails.clld.org/)
+* [Austronesian Basic Vocabulary Database](https://abvd.shh.mpg.de/austronesian/)
+* [UraLex](https://github.com/lexibank/uralex)
+
+```{r, eval = FALSE}
+df <- wals.feature(c("1a", "20a"))
+head(df)
+map.feature(df$language,
+            features = df$`1a`,
+            latitude = df$latitude,
+            longitude = df$longitude,
+            label = df$language,
+            title = "Consonant Inventories")
+```
+
+
+## ... а вообще смотрите [мануал](https://ropensci.github.io/lingtypology/)

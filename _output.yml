@@ -1,0 +1,14 @@
+bookdown::gitbook:
+  df_print: paged
+  css: style.css
+  always_allow_html: yes
+  config:
+    self_contained: yes
+    toc:
+      collapse: section
+      before: |
+        <li><a href="./">lingtypology</a></li>
+    sharing: no
+    edit:
+      link: https://github.com/agricolamz/2022.11.16_Irkutsk_r_packages/edit/master/%s
+      text: "Edit"

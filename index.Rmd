@@ -1,0 +1,14 @@
+--- 
+title: "Введение в R и lingtypology"
+author: "Г. Мороз"
+bibliography:
+- bibliography.bib
+editor_options:
+  chunk_output_type: console
+link-citations: yes
+documentclass: book
+site: bookdown::bookdown_site
+biblio-style: apalike
+---
+
+Лекция в Иркутском государственном университете.
